@@ -1,13 +1,15 @@
 {
-    "name": "RequireJS Starter",
-    "version": "1.0.0",
-    "dependencies": {
-        "jquery": "1.11",
-        "backbone-amd": null,
-        "underscore-amd": null,
-        "requirejs": null,
-        "momentjs": null,
-        "amplify": null,
-        "knockout.js": null
-    }
+  "name": "weather",
+  "dependencies": {
+    "requirejs": "^2.1.11",
+    "jquery": "^2.1.0",
+    "knockout.js": "^3.0.0",
+    "sammy": "^0.7.5",
+    "font-awesome": "^4.0.3",
+    "knockout.validation": "^1.0.2",
+    "bootstrap-sass": "^3.0.2",
+    "amplify": null,
+    "momentjs": null
+  }
 }
+
