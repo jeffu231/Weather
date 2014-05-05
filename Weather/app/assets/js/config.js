@@ -11,6 +11,7 @@ require.config({
 		'utils': '../../assets/js/util',
 		'dataservices': '../../assets/js/dataservices',
 		'amplify': '../../bower_components/amplify/lib/amplify.min',
+		'moment': '../../bower_components/momentjs/min/moment.min'
 	},
 	shim: {
 		'jquery.bootstrap': {

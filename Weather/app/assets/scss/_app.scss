@@ -1,6 +1,7 @@
 $green: #00FF00;
 $red: #FF0000;
 $blue: #0000FF;
+$orange: #FFCC00;
 
 /* Space out content a bit */
 body {
@@ -31,9 +32,8 @@ body {
 }
 
 .wx-unit {
-	font-size: 1.5rem;
 	vertical-align: super;
-	font-weight:100;		
+	font-weight: 100;
 }
 
 .wx-temp {
@@ -41,17 +41,35 @@ body {
 	font-size: 4.75rem;
 	.wx-value{
 		font-size: 4.75rem;
+		 
 	}
+	.wx-unit {
+			font-size: 1.5rem;
+		}
 }
 
 .wx-cold {
 	color:$blue;
 }
 .wx-warm {
-	color:$green;
+	color:$orange;
 }
 .wx-hot {
 	color:$red;
+}
+
+.update{
+	color: green;   
+    -moz-transition: 1s;
+    -webkit-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+}
+
+#curReadings {
+	.wx-unit {
+		font-size: .75rem;
+	}
 }
 
 #curWind {

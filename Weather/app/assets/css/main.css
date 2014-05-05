@@ -9776,40 +9776,39 @@ td.visible-print {
   }
 }
 /* Space out content a bit */
-/* line 6, ../scss/_app.scss */
+/* line 7, ../scss/_app.scss */
 body {
   padding-top: 60px;
   padding-bottom: 20px;
 }
 
 /* some nice centered entries */
-/* line 12, ../scss/_app.scss */
+/* line 13, ../scss/_app.scss */
 .entry-home {
   padding: 5px;
   border-radius: 4px;
   text-align: center;
   font-weight: bold;
 }
-/* line 18, ../scss/_app.scss */
+/* line 19, ../scss/_app.scss */
 .entry-home i {
   padding-left: 10px;
 }
 
-/* line 23, ../scss/_app.scss */
+/* line 24, ../scss/_app.scss */
 .wx-data, .wx-temp {
   font-size: 1.50rem;
   font-weight: 100;
 }
 
-/* line 28, ../scss/_app.scss */
+/* line 29, ../scss/_app.scss */
 .wx-value {
   font-size: 1.5rem;
   font-weight: 200;
 }
 
-/* line 33, ../scss/_app.scss */
+/* line 34, ../scss/_app.scss */
 .wx-unit {
-  font-size: 1.5rem;
   vertical-align: super;
   font-weight: 100;
 }
@@ -9822,43 +9821,61 @@ body {
 .wx-temp .wx-value {
   font-size: 4.75rem;
 }
+/* line 46, ../scss/_app.scss */
+.wx-temp .wx-unit {
+  font-size: 1.5rem;
+}
 
-/* line 47, ../scss/_app.scss */
+/* line 51, ../scss/_app.scss */
 .wx-cold {
   color: blue;
 }
 
-/* line 50, ../scss/_app.scss */
+/* line 54, ../scss/_app.scss */
 .wx-warm {
-  color: lime;
+  color: #ffcc00;
 }
 
-/* line 53, ../scss/_app.scss */
+/* line 57, ../scss/_app.scss */
 .wx-hot {
   color: red;
 }
 
-/* line 57, ../scss/_app.scss */
+/* line 61, ../scss/_app.scss */
+.update {
+  color: green;
+  -moz-transition: 1s;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+}
+
+/* line 70, ../scss/_app.scss */
+#curReadings .wx-unit {
+  font-size: .75rem;
+}
+
+/* line 75, ../scss/_app.scss */
 #curWind {
   width: 50px;
   height: 50px;
   position: relative;
   margin: 0 auto;
 }
-/* line 63, ../scss/_app.scss */
+/* line 81, ../scss/_app.scss */
 #curWind #windCompassContainer {
   width: 50px;
   height: 50px;
   overflow: hidden;
 }
-/* line 68, ../scss/_app.scss */
+/* line 86, ../scss/_app.scss */
 #curWind #windCompassContainer #windCompass {
   position: absolute;
   top: 0;
   left: 0;
   display: block;
 }
-/* line 74, ../scss/_app.scss */
+/* line 92, ../scss/_app.scss */
 #curWind #windCompassContainer #windCompass .dial {
   border-radius: 50%;
   width: 59px;
@@ -9869,7 +9886,7 @@ body {
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
-/* line 85, ../scss/_app.scss */
+/* line 103, ../scss/_app.scss */
 #curWind #windCompassContainer #windCompass .arrow-direction {
   width: 0;
   height: 0;
@@ -9881,7 +9898,7 @@ body {
   top: -10px;
   border-top-color: lime;
 }
-/* line 98, ../scss/_app.scss */
+/* line 116, ../scss/_app.scss */
 #curWind #windCompassContainer #windCompassSpeed {
   position: absolute;
   top: 0;
@@ -9893,7 +9910,7 @@ body {
   text-align: center;
   font-weight: 500;
 }
-/* line 110, ../scss/_app.scss */
+/* line 128, ../scss/_app.scss */
 #curWind #windCompassContainer #windN {
   position: absolute;
   top: 5px;
@@ -9903,7 +9920,7 @@ body {
   text-align: center;
   font-size: 0.65rem;
 }
-/* line 120, ../scss/_app.scss */
+/* line 138, ../scss/_app.scss */
 #curWind #windCompassContainer #windCompassSpeed {
   font-size: 0.9375rem;
   width: 65px;

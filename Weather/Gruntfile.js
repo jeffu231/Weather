@@ -14,7 +14,7 @@ module.exports = function(grunt) {
 
 	// load all grunt tasks
 	require('load-grunt-tasks')(grunt);
-	grunt.loadNpmTasks('grunt-connect-proxy');
+	//grunt.loadNpmTasks('grunt-connect-proxy');
 
 	// configurable paths
 	var yeomanConfig = {
@@ -282,13 +282,23 @@ module.exports = function(grunt) {
 					test : {
 						path : 'http://localhost:' + TEST_PORT
 					}
-				}
+				},
+				tomcat_deploy: {
+				    host: 'morpheus.kb9kld.org',
+				    login: 'grunt',
+				    password: 'badpass',
+				    path: '/Weather',
+				    port: 8080,
+				    dist: 'dist',
+				    deploy: '/manager/text/deploy',
+				    undeploy: '/manager/text/undeploy',
+				  }
 			});
 
 	grunt.registerTask('build', [ 'clean:dist', 'replace:dist', 'compass:dist',
 			'requirejs', 'concat', 'copy', 'uglify' ]);
 
-	grunt.registerTask('default', [ 'jshint', 'build' ]);
+	grunt.registerTask('default', [ 'jshint', 'build']);
 
 	grunt.registerTask('serve', function(target) {
 		if (target === 'dist') {

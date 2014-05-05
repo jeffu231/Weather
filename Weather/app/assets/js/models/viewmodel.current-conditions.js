@@ -1,8 +1,8 @@
 'use strict';
 
 /* global define:true*/
-define(['jquery', 'knockout', 'dataservices/model.dataserviceAPI', 'dataservices/dataservice.reading', 'util/binding.ko-format'],
-		function ($, ko, dsModel, dsReading) {
+define(['jquery', 'knockout', 'dataservices/model.dataserviceAPI', 'dataservices/dataservice.reading', 'moment', 'util/binding.ko-format'],
+		function ($, ko, dsModel, dsReading, moment) {
 	
 	function CurrentConditionsViewModel() {
 		var self = this;
@@ -13,9 +13,6 @@ define(['jquery', 'knockout', 'dataservices/model.dataserviceAPI', 'dataservices
 		self.name = 'current-conditions';
 		self.reading = ko.observable();
 		self.lastUpdate = ko.observable();
-		self.incrementLastUpdate = function () {
-			self.lastUpdate(self.lastUpdate() + 1);
-		};
 		self.imageRotateCss = ko.computed({
 			read: function () {
 				return 'rotate(' + self.reading().windDirection + 'deg)';
@@ -46,16 +43,12 @@ define(['jquery', 'knockout', 'dataservices/model.dataserviceAPI', 'dataservices
 				//alert('Error!');
 			} else {
 				self.reading(prms.data.result);
-				self.lastUpdate(0);
+				self.lastUpdate(moment().format('h:mm:ss a'));
 			}
 		};
 	}
 	
 	var model = new CurrentConditionsViewModel();
-	
-	setInterval(function () {
-		model.incrementLastUpdate();
-	}, 1000);
 	
 	setInterval(function () {
 		model.init();
